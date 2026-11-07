@@ -12,8 +12,7 @@ export default function DiscountCodeForm({ onApplied }) {
         body: JSON.stringify({ code })
       });
       if (!response.ok) {
-        setError(response.status === 403 ? 'Rabatkoder er ikke aktiveret.' :
-          response.status === 400 ? 'Ugyldig rabatkode.' : 'Der opstod en serverfejl. Prøv igen.');
+        setError(response.status === 400 ? 'Ugyldig rabatkode.' : 'Der opstod en serverfejl. Prøv igen.');
         return;
       }
       const preview = await response.json();
