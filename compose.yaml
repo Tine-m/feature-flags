@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      FEATURE_DISCOUNT_CODES: "${FEATURE_DISCOUNT_CODES:-false}"
+    ports:
+      - "7070:7070"
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
