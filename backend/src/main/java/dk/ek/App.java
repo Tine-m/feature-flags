@@ -1,6 +1,7 @@
 package dk.ek;
 
 import io.javalin.Javalin;
+
 import java.util.Map;
 
 public class App {
