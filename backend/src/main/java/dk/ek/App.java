@@ -3,6 +3,7 @@ package dk.ek;
 import io.javalin.Javalin;
 import io.javalin.http.BadRequestResponse;
 import io.javalin.http.ForbiddenResponse;
+
 import java.util.Map;
 
 public class App {
@@ -30,5 +31,7 @@ public class App {
         });
         return app;
     }
-    public record DiscountRequest(String code) {}
+
+    public record DiscountRequest(String code) {
+    }
 }
